@@ -45,7 +45,7 @@ AreaOfRectangle = widthOfRectangle * heightOfRectangle
 --write the area on the screen. Take into consideration the size of the font when positioning it on the screen
 areaText = display.newText("The area of this rectangle with a width of \n" ..
 	widthOfRectangle .. " and a height of " .. heightOfRectangle .. " is " ..
-	AreaOfRectangle .. "pixels². ", 0, 0, Arial, textSize)
+	AreaOfRectangle .. " pixels². ", 0, 0, nil, textsize)
 
 -- anchor the text and set its (x,y) position
 areaText.anchorX = 0
@@ -60,26 +60,13 @@ areaText:setTextColor(1, 1, 1)
 
 -- create my local variables
 local areaText2
-local textsize = 50
 local myCircle
-local radiusOfCircle = 200
+local radiusOfCircle = 150
 local AreaOfCircle
-local Pi = 3.14159
-
--- set the background colour of my screen.
-display.setDefault("background", 244/255, 121/255, 24/255)
-
--- to remove status bar
-display.setStatusBar(display.HiddenStatusBar)
+local PI = 3.14159
 
 --draw the rectangle that is half the width and height of the screen size.
-myCircle = display.newCircle
-
--- anchor the rectangle in the top left corner of the screen and set its (x,y) position
-myCircle.anchorX = 0
-myCircle.anchorY = 0
-myCircle.x = 20
-myCircle.y = 20
+myCircle = display.newCircle(700,200,radiusOfCircle)
 
 -- set the width of the border
 myCircle.strokeWidth = 20
@@ -91,18 +78,18 @@ myCircle:setFillColor(0.7, 0.1, 0.3)
 myCircle:setStrokeColor(0, 1, 0)
 
 -- calculate the area
-AreaOfCircle = radiusOfCircle * Pi
+AreaOfCircle = radiusOfCircle*radiusOfCircle * PI
 
 --write the area on the screen. Take into consideration the size of the font when positioning it on the screen
-areaText = display.newText("The area of this rectangle with a width of \n" ..
-	widthOfRectangle .. " and a height of " .. heightOfRectangle .. " is " ..
-	AreaOfRectangle .. "pixels². ", 0, 0, Arial, textSize)
+areaText2 = display.newText("The area of this circle with a radius of \n" ..
+	radiusOfCircle ..  " is " ..
+	AreaOfCircle .. " pixels². ", 0, 0, Arial, textsize)
 
 -- anchor the text and set its (x,y) position
-areaText.anchorX = 0
-areaText.anchorY = 0
-areaText.x = 20
-areaText.y = display.contentHeight/2
+areaText2.anchorX = 0
+areaText2.anchorY = 0
+areaText2.x = 20
+areaText2.y = display.contentHeight*3/4
 
 -- set the colour of the newText
-areaText:setTextColor(1, 1, 1)
+areaText2:setTextColor(1, 1, 1)
