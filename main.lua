@@ -1,4 +1,0 @@
--- Title: TouchAndDrag
--- Name: Your Name
--- Course: ICS2O/3C
--- This program...
