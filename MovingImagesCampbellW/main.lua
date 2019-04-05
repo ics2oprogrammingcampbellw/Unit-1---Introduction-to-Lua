@@ -1,7 +1,7 @@
 -- Title: MovingImages
--- Name: Your Name
+-- Name: CampbellW
 -- Course: ICS2O/3C
--- This program...
+-- This program displays two images which go across the screen and rotate.
 
 
 -- hide the status bar
