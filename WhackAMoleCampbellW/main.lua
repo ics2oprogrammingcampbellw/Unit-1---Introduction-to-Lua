@@ -29,3 +29,67 @@ local mole = display.newImage( "Images/mole.png" , 0, 0 )
 
 local score
 local score = 
+
+
+-------------------------------------------------------------------------------------------
+
+-- ADD LOCAL VARIABLE TO KEEP TRACK OF THE SCORE
+
+
+
+-- ADD LOCAL TEXT OBJECT TO DISPLAY THE SCORE>
+
+
+---------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------Functions---------------------------------
+
+-- This function that makes the mole appear in a random (x,y) position on the screen
+-- before calling the Hide function
+function PopUp( )
+
+
+	-- Choosing random positions on the screen between 0 and the size of the screen
+	mole.x = math.random( 0, display.contentWidth )
+	mole.y = math.random( 0, display.contentHeight )
+
+	mole.alpha = 1 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
