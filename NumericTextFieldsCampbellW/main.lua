@@ -54,7 +54,7 @@ end
 ----------------------------------------------------------------------------------------------------------------------------
 
 -- displays a question and set the colour
-questionObject = display.newText( "9+9", display.contentHeight/2, 1, 50 )
+questionObject = display.newText( "", display.contentHeight/2, 1, 50 )
 questionObject:setTextColor(155/255, 42/255, 198/255)
 -- create the correct text object and make it invisible
 correctObject = display.newText( "Correct!", display.contentWidth/2, display.contentHeight*2/3, nil, 50)
