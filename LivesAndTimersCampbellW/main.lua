@@ -7,14 +7,18 @@ local secondsLeft = 10
 local clockText
 local countDownTimer
 
-local lives = 4
+local lives = 1
 local heart1
 local heart2
 local heart3
 local heart4
 
 --*** ADD LOCAL VARIABLE FOR: INCORRECT OBJECT, POINTS OBJECTS, POINTS
+local incorrectObject
 
+local correctObject
+
+local score = 0
 -------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 -------------------------------------------------------------------------------------------------------------
@@ -37,23 +41,25 @@ local function UpdateTime()
 		-- AND CANCEL THE TIMER REMOVE THE THIRD HEART BY MAKING IT INVISIBLE
 		if (lives == 4) then
 			heart4.isVisible = false
+		end
 		if (lives == 3) then
 			heart3.isVisible = false
+		end
 		if (lives == 2) then
 			heart2.isVisible = false
-		elseif (lives == 1) then
-				heart1.isVisible = false
 		end
+		if (lives == 1) then
+			heart1.isVisible = false
 
-		--*** CALL THE FUNCTION TO ASK A NEW QUESTION
-
+			UpdateTime()
+		end
 	end
 end
 
 -- function that calls the timer
 local function StartTimer()
 	-- create a countdown timer that loops infinitely
-	countDownTimer = timer.performWithDelay( 1000, UpdateTime, 0)
+	countDownTimer = timer.performWithDelay( 2000, UpdateTime)
 end
 
 -----------------------------------------------------------------------------------------------------------------
@@ -69,19 +75,3 @@ heart1.y = display.contentHeight * 1 / 7
 heart2 = display.newImageRect("Images/heart.png", 100, 100)
 heart2.x = display.contentWidth * 6 / 8
 heart2.y = display.contentHeight * 1 / 7
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
