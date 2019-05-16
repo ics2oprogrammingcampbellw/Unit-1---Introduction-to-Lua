@@ -5,7 +5,6 @@
 --print ("***Hello")
 
 -- hide the status bar
-display.setStatusBar(display.HiddenStatusBar)
 
 -- sets the background colour
 display.setDefault("background", 124/255, 249/255, 199/255)
